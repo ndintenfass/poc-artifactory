@@ -8,5 +8,6 @@ dependencies:
 
 test:
   override:
+  - mkdir stuff 
   - echo "Hello World" > stuff/hello.txt
   - ./jfrog --key $BINTRAY_API_KEY --publish true --override true ./stuff/
