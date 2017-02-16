@@ -1,8 +1,11 @@
+general:
+  artifacts: artifacts/
+
 dependencies:
   pre: 
   - curl -fL https://getcli.jfrog.io | sh
 
 test:
   override:
-  - echo "Hello World" > hello.txt
-  - jfrog --key $BINTRAY_API_KEY --publish true --override true ./hello.txt
+  - echo "Hello World" > artifacts/hello.txt
+  - ./jfrog --key $BINTRAY_API_KEY --publish true --override true ./artifacts/
