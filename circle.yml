@@ -1,3 +1,7 @@
 dependencies:
   pre: 
   - curl -fL https://getcli.jfrog.io | sh
+
+test:
+  override:
+  - echo 'no need for tests'
