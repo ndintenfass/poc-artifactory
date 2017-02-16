@@ -4,4 +4,5 @@ dependencies:
 
 test:
   override:
-  - echo 'no need for tests'
+  - echo "Hello World" > hello.txt
+  - jfrog --key $BINTRAY_API_KEY --publish true --override true ./hello.txt
