@@ -1,5 +1,6 @@
 general:
-  artifacts: artifacts/
+  artifacts: 
+  - "stuff"
 
 dependencies:
   pre: 
@@ -7,5 +8,5 @@ dependencies:
 
 test:
   override:
-  - echo "Hello World" > artifacts/hello.txt
-  - ./jfrog --key $BINTRAY_API_KEY --publish true --override true ./artifacts/
+  - echo "Hello World" > stuff/hello.txt
+  - ./jfrog --key $BINTRAY_API_KEY --publish true --override true ./stuff/
